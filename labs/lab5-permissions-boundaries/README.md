@@ -25,3 +25,15 @@ awslocal iam attach-user-policy --user-name BoundaryUser --policy-arn arn:aws:ia
 - **Effective Permissions:** The permissions that an entity actually has, which is the intersection of its identity-based policies and its permissions boundary.
 - **Privilege Escalation Mitigation:** Boundaries are used to prevent users from gaining more permissions than they should, even if they have the ability to create new policies or roles.
 - **Delegated Administration:** Commonly used when allowing developers to create roles for services (like Lambda) while ensuring those roles cannot exceed a predefined security "sandbox".
+
+## 🛠️ Command Reference
+
+- `awslocal iam create-policy`: Creates a new managed policy.
+    - `--policy-name`: The name of the policy.
+    - `--policy-document`: The JSON policy document.
+- `awslocal iam create-user`: Creates a new IAM user.
+    - `--user-name`: The name of the user.
+    - `--permissions-boundary`: The ARN of the policy to use as a permissions boundary.
+- `awslocal iam attach-user-policy`: Attaches a managed policy to an IAM user.
+    - `--user-name`: The name of the user.
+    - `--policy-arn`: The ARN of the policy to attach.

@@ -41,3 +41,16 @@ awslocal sts assume-role \
 - **External ID:** A unique identifier that a third party must include when assuming a role. It is a security best practice to prevent the "Confused Deputy" problem in cross-account scenarios.
 - **Confused Deputy Problem:** A security issue where an entity that doesn't have permission to perform a certain action can coerce a more-privileged entity to perform the action for them.
 - **Temporary Credentials:** These consist of an Access Key ID, a Secret Access Key, and a Security Token. They expire after a specified duration (default is 1 hour).
+
+## 🛠️ Command Reference
+
+- `awslocal sts get-caller-identity`: Returns details about the IAM user or role whose credentials are used to call the operation.
+    - `--query`: Filters the output to return specific fields (e.g., `Account`).
+- `awslocal iam create-role`: Creates a new IAM role.
+    - `--role-name`: The name of the role.
+    - `--assume-role-policy-document`: The trust policy that allows an entity to assume the role.
+- `awslocal sts assume-role`: Returns a set of temporary security credentials that you can use to access AWS resources.
+    - `--role-arn`: The Amazon Resource Name (ARN) of the role to assume.
+    - `--role-session-name`: An identifier for the assumed role session.
+    - `--external-id`: A unique identifier that might be required by a role trust policy.
+    - `--duration-seconds`: The duration, in seconds, of the role session.

@@ -30,3 +30,9 @@ awslocal iam create-policy --policy-name RestrictEC2InstanceType --policy-docume
 - **ABAC (Attribute-Based Access Control):** An authorization strategy that defines permissions based on attributes, such as tags or properties of the resource or request.
 - **Granular Control:** Conditions allow you to go beyond simple service-level permissions and enforce specific business rules (e.g., "only allow small instances" or "only allow access from a specific IP").
 - **Condition Keys:** Service-specific keys (like `ec2:InstanceType`) and global keys (like `aws:SourceIp`) provide the data used for evaluation.
+
+## 🛠️ Command Reference
+
+- `awslocal iam create-policy`: Creates a new managed policy.
+    - `--policy-name`: The name of the policy.
+    - `--policy-document`: The JSON policy document containing conditions.

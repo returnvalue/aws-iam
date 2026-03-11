@@ -32,3 +32,12 @@ awslocal iam attach-role-policy \
 - **Permissions Policy:** Defines what actions the role can perform and on which resources.
 - **IAM Role:** An IAM identity that you can create in your account that has specific permissions. An IAM role is similar to an IAM user, but it is not uniquely associated with one person.
 - **STS (Security Token Service):** The service that issues temporary security credentials when a role is assumed.
+
+## 🛠️ Command Reference
+
+- `awslocal iam create-role`: Creates a new IAM role.
+    - `--role-name`: The name of the role.
+    - `--assume-role-policy-document`: The trust policy that allows an entity (like a service) to assume the role.
+- `awslocal iam attach-role-policy`: Attaches a managed policy to an IAM role.
+    - `--role-name`: The name of the role.
+    - `--policy-arn`: The ARN of the policy to attach.

@@ -40,3 +40,14 @@ awslocal iam attach-user-policy --user-name DataScientist --policy-arn $DENY_POL
 - **Explicit Allow:** A policy that allows a specific action on a specific resource.
 - **Explicit Deny:** A policy that explicitly denies a specific action on a specific resource. This always overrides any Allow.
 - **Policy Evaluation Order:** AWS evaluates all policies that apply to the request. If an explicit deny is found in any of those policies, the request is denied.
+
+## 🛠️ Command Reference
+
+- `awslocal iam create-policy`: Creates a new managed policy.
+    - `--policy-name`: The name of the policy.
+    - `--policy-document`: The JSON policy document.
+- `awslocal iam create-user`: Creates a new IAM user.
+    - `--user-name`: The name of the user.
+- `awslocal iam attach-user-policy`: Attaches a managed policy to an IAM user.
+    - `--user-name`: The name of the user.
+    - `--policy-arn`: The ARN of the policy to attach.
