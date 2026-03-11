@@ -1,0 +1,14 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Resources:
+  RestrictEC2Policy:
+    Type: 'AWS::IAM::ManagedPolicy'
+    Properties:
+      PolicyDocument:
+        Version: '2012-10-17'
+        Statement:
+          - Effect: Allow
+            Action: 'ec2:RunInstances'
+            Resource: 'arn:aws:ec2:*:*:instance/*'
+            Condition:
+              StringEquals:
+                'ec2:InstanceType': ['t3.micro', 't3.small']

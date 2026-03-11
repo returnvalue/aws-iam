@@ -1,0 +1,18 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Resources:
+  S3OnlyBoundaryPolicy:
+    Type: 'AWS::IAM::ManagedPolicy'
+    Properties:
+      PolicyDocument:
+        Version: '2012-10-17'
+        Statement:
+          - Effect: Allow
+            Action: 's3:*'
+            Resource: '*'
+  BoundaryUser:
+    Type: 'AWS::IAM::User'
+    Properties:
+      UserName: BoundaryUser
+      PermissionsBoundary: !Ref S3OnlyBoundaryPolicy
+      ManagedPolicyArns:
+        - arn:aws:iam::aws:policy/AdministratorAccess

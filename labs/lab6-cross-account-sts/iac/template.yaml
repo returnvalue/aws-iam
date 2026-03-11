@@ -1,0 +1,18 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Parameters:
+  AccountId: {Type: String}
+Resources:
+  VendorRole:
+    Type: 'AWS::IAM::Role'
+    Properties:
+      RoleName: VendorCrossAccountRole
+      AssumeRolePolicyDocument:
+        Version: '2012-10-17'
+        Statement:
+          - Effect: Allow
+            Principal:
+              AWS: !Sub 'arn:aws:iam::${AccountId}:root'
+            Action: sts:AssumeRole
+            Condition:
+              StringEquals:
+                'sts:ExternalId': 'SuperSecretVendorID-123'
