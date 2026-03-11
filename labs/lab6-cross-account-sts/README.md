@@ -44,12 +44,12 @@ awslocal sts assume-role \
 
 ## 🛠️ Command Reference
 
-- `awslocal sts get-caller-identity`: Returns details about the IAM user or role whose credentials are used to call the operation.
+- `sts get-caller-identity`: Returns details about the IAM user or role whose credentials are used to call the operation.
     - `--query`: Filters the output to return specific fields (e.g., `Account`).
-- `awslocal iam create-role`: Creates a new IAM role.
+- `iam create-role`: Creates a new IAM role.
     - `--role-name`: The name of the role.
     - `--assume-role-policy-document`: The trust policy that allows an entity to assume the role.
-- `awslocal sts assume-role`: Returns a set of temporary security credentials that you can use to access AWS resources.
+- `sts assume-role`: Returns a set of temporary security credentials that you can use to access AWS resources.
     - `--role-arn`: The Amazon Resource Name (ARN) of the role to assume.
     - `--role-session-name`: An identifier for the assumed role session.
     - `--external-id`: A unique identifier that might be required by a role trust policy.

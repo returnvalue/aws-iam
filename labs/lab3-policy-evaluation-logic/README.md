@@ -43,11 +43,11 @@ awslocal iam attach-user-policy --user-name DataScientist --policy-arn $DENY_POL
 
 ## 🛠️ Command Reference
 
-- `awslocal iam create-policy`: Creates a new managed policy.
+- `iam create-policy`: Creates a new managed policy.
     - `--policy-name`: The name of the policy.
     - `--policy-document`: The JSON policy document.
-- `awslocal iam create-user`: Creates a new IAM user.
+- `iam create-user`: Creates a new IAM user.
     - `--user-name`: The name of the user.
-- `awslocal iam attach-user-policy`: Attaches a managed policy to an IAM user.
+- `iam attach-user-policy`: Attaches a managed policy to an IAM user.
     - `--user-name`: The name of the user.
     - `--policy-arn`: The ARN of the policy to attach.

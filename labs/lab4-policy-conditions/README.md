@@ -33,6 +33,6 @@ awslocal iam create-policy --policy-name RestrictEC2InstanceType --policy-docume
 
 ## 🛠️ Command Reference
 
-- `awslocal iam create-policy`: Creates a new managed policy.
+- `iam create-policy`: Creates a new managed policy.
     - `--policy-name`: The name of the policy.
     - `--policy-document`: The JSON policy document containing conditions.

@@ -35,9 +35,9 @@ awslocal iam attach-role-policy \
 
 ## 🛠️ Command Reference
 
-- `awslocal iam create-role`: Creates a new IAM role.
+- `iam create-role`: Creates a new IAM role.
     - `--role-name`: The name of the role.
     - `--assume-role-policy-document`: The trust policy that allows an entity (like a service) to assume the role.
-- `awslocal iam attach-role-policy`: Attaches a managed policy to an IAM role.
+- `iam attach-role-policy`: Attaches a managed policy to an IAM role.
     - `--role-name`: The name of the role.
     - `--policy-arn`: The ARN of the policy to attach.

@@ -27,13 +27,13 @@ awslocal iam attach-group-policy \
 
 ## 🛠️ Command Reference
 
-- `awslocal iam create-user`: Creates a new IAM user.
+- `iam create-user`: Creates a new IAM user.
     - `--user-name`: The name of the user.
-- `awslocal iam create-group`: Creates a new IAM group.
+- `iam create-group`: Creates a new IAM group.
     - `--group-name`: The name of the group.
-- `awslocal iam add-user-to-group`: Adds an IAM user to an IAM group.
+- `iam add-user-to-group`: Adds an IAM user to an IAM group.
     - `--user-name`: The name of the user.
     - `--group-name`: The name of the group.
-- `awslocal iam attach-group-policy`: Attaches a managed policy to an IAM group.
+- `iam attach-group-policy`: Attaches a managed policy to an IAM group.
     - `--group-name`: The name of the group.
     - `--policy-arn`: The ARN of the policy to attach.
