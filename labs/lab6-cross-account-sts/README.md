@@ -1,7 +1,6 @@
 # Lab 6: Temporary Access via STS (Confused Deputy Prevention)
 
 **Goal:** Grant a third-party vendor temporary access to your account using `sts:AssumeRole`. Implement an `ExternalId` condition to protect against the "Confused Deputy" vulnerability.
-
 ```bash
 # 1. Dynamically get your LocalStack Account ID
 ACCOUNT_ID=$(awslocal sts get-caller-identity --query 'Account' --output text)

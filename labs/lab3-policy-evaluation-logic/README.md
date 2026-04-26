@@ -1,7 +1,6 @@
 # Lab 3: Policy Evaluation Logic (Explicit Deny vs. Allow)
 
 **Goal:** IAM defaults to Implicit Deny. If a policy has an Allow, the action is permitted. However, if any policy evaluates to an Explicit Deny, it will completely override the Allow.
-
 ```bash
 # 1. Create an Allow policy for all S3 buckets
 cat <<EOF > s3-allow-all.json

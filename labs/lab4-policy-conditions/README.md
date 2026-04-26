@@ -1,7 +1,6 @@
 # Lab 4: Conditional Access
 
 **Goal:** Enforce restrictions on the types of EC2 instances a user can provision by applying a Condition block to their policy.
-
 ```bash
 # 1. Create a policy with an EC2 InstanceType condition
 cat <<EOF > restrict-ec2.json

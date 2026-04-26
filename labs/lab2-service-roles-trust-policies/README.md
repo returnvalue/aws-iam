@@ -1,7 +1,6 @@
 # Lab 2: Service Roles & Trust Policies
 
 **Goal:** Compute services like Lambda should never use hardcoded access keys. Instead, create a Service Role with a Trust Policy that allows the Lambda service to assume the role.
-
 ```bash
 # 1. Create a Trust Policy document allowing Lambda to assume the role
 cat <<EOF > trust-policy.json

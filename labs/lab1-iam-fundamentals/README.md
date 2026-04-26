@@ -1,7 +1,6 @@
 # Lab 1: IAM Fundamentals (Users, Groups, & Identity Policies)
 
 **Goal:** Create an IAM User, add them to a Group, and attach an identity-based AWS managed policy (AmazonS3ReadOnlyAccess).
-
 ```bash
 # 1. Create a new IAM User
 awslocal iam create-user --user-name DevUser

@@ -1,7 +1,6 @@
 # Lab 5: Privilege Escalation Mitigation (Permissions Boundaries)
 
 **Goal:** A permissions boundary sets the maximum permissions an entity can have. Even if a user is granted AdministratorAccess, the boundary will block them if it only allows S3 access.
-
 ```bash
 # 1. Create a Permissions Boundary Policy (Max permissions: S3 only)
 cat <<EOF > boundary-policy.json
